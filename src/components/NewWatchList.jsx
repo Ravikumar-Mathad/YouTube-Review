@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/watchlistBtn.css'
+import '../styles/newWatchListBtn.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark } from '@fortawesome/free-regular-svg-icons'
 
