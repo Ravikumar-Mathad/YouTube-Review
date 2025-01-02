@@ -3,7 +3,7 @@ import '../styles/watchlistBtn.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark } from '@fortawesome/free-regular-svg-icons'
 
-const WatchlistBtn = () => {
+const NewWatchlistBtn = () => {
   return (
     <button className='watchlistBtn'>
       <FontAwesomeIcon icon={faBookmark} size="sm" style={{color: "#ffffff",}} />
@@ -12,4 +12,4 @@ const WatchlistBtn = () => {
   )
 }
 
-export default WatchlistBtn
+export default NewWatchlistBtn

@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/navBar.css";
-import WatchlistBtn from "./watchlistBtn";
+import NewWatchlistBtn from "./NewWatchList";
 import ProfileBtn from "./ProfileBtn";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
@@ -75,7 +75,7 @@ const NavBar = () => {
       </nav>
       <div ref={refaccountSection} className="accountSection">
         <NavLink to="/WatchList">
-          <WatchlistBtn />
+          <NewWatchlistBtn />
         </NavLink>
         <NavLink to="/WatchList">
           <ProfileBtn />
