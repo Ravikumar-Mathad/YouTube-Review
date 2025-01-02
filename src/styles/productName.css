@@ -1,0 +1,20 @@
+.productName{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    gap: 9px;
+    letter-spacing: -0.453px;
+    user-select: none;
+    width: 210px;
+    height: 40px;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.productName:hover{
+    color: rgba(0, 0, 0, 0.705);
+}
+

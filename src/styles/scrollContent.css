@@ -1,0 +1,354 @@
+.TopratedShows {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: black;
+  width: 100vw;
+  height: 63vh;
+}
+
+.headlinesDiv {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100vw;
+  gap: 1.3vh;
+}
+
+.headline {
+  font-size: 2.5vw;
+  letter-spacing: -2px;
+  color: white;
+  width: 100vw;
+  padding-left: 2.5vw;
+}
+
+.miniheadline {
+  font-size: 1.3vw;
+  color: rgba(255, 255, 255, 0.5);
+  width: 100vw;
+  padding-left: 2.5vw;
+}
+
+.contentDiv {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100vw;
+  padding: 0px 0px 0px 2.5vw;
+  gap: 1.5vw;
+  height: 52vh;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+.contentDiv::-webkit-scrollbar {
+  display: none;
+}
+
+.playmodification {
+  aspect-ratio: 16 / 9;
+  width: 22vw;
+  border-radius: 15px;
+  border: solid 1px rgba(255, 255, 255, 0.16);
+}
+
+.topRatedVideo {
+  width: 22vw;
+  height: 46.5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1vh;
+  transition: transform 0.35s ease;
+  border-radius: 15px;
+  border: solid 0px #ffffff33;
+}
+
+.topRatedVideo:hover {
+  transform: scale(1.1);
+  border: solid 1px #ffffff33;
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.topRatedVideo:hover .playmodification {
+  border-radius: 15px 15px 0px 0px;
+}
+
+.topRatedVideo:hover .videoDetails {
+  padding: 0.4vw;
+}
+
+.topRatedVideo:hover .videoBtns,
+.topRatedVideo:hover .statistics {
+  display: flex;
+}
+
+.rightScrollBtn {
+  background: linear-gradient(
+    269.25deg,
+    #0f1014 0.62%,
+    rgba(15, 16, 20, 0) 99.33%
+  );
+  width: 3.7vw;
+  height: 26.5vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  position: absolute;
+  z-index: 99;
+  top: 13vh;
+  right: 0vw;
+}
+
+
+.leftScrollBtn {
+  background: linear-gradient(88deg, #0f1014 0.62%, rgba(15, 16, 20, 0) 99.33%);
+  width: 3.7vw;
+  height: 26.5vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  position: absolute;
+  z-index: 99;
+  top: 13vh;
+}
+
+.TopratedShows:hover .leftScrollBtn {
+  display: flex;
+}
+
+.TopratedShows:hover .rightScrollBtn {
+  display: flex;
+}
+
+.videoDetails {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 5px;
+  padding: 0.4vh;
+  border-radius: 15px;
+}
+
+.videoBtns {
+  display: none;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  gap: 0.5vw;
+  margin-bottom: 1vh;
+}
+
+.videoBtns a{
+  text-decoration: none;
+}
+
+.WatchNowBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-size: 1.1vw;
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  width: 15vw;
+  height: 5.2vh;
+  border: none;
+}
+
+
+.WatchNowBtn:hover {
+  transform: scale(1.01);
+}
+
+.WatchNowBtn:active {
+  background-color: rgb(229, 226, 226);
+}
+
+.AddWatchList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.062);
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  width: 2.5vw;
+  height: 5.2vh;
+  border: none;
+}
+
+.AddWatchList:hover {
+  transform: scale(1.08);
+}
+
+.AddWatchList:active {
+  background-color: rgb(20, 20, 20);
+}
+
+
+.AddRating{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.062);
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  width: 2.5vw;
+  height: 5.2vh;
+  border: none;
+}
+
+.AddRating:hover {
+  transform: scale(1.08);
+}
+
+.AddRating:active {
+  background-color: rgb(20, 20, 20);
+}
+
+.videoTitle {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1vw;
+  width: 100%;
+}
+
+.youtuber {
+  width: 100%;
+  font-size: 1vw;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.statistics {
+  display: none;
+  width: 100%;
+  justify-content: flex-start;
+  gap: 1.2vw;
+}
+
+.videoCount {
+  font-size: 1vw;
+  color: #ffffff80;
+}
+
+.videoDuration {
+  font-size: 1vw;
+  color: #ffffff80;
+}
+
+.YTrating{
+  font-size: 1vw;
+  color: #ffffff80;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .TopratedShows {
+    width: 100vw;
+    height: 56vh;
+  }
+
+  .headlinesDiv {
+    gap: 1vh;
+  }
+
+  .headline {
+    font-size: 7vw;
+    padding-left: 4vw;
+    padding-right: 2vw;
+  }
+
+  .miniheadline {
+    font-size: 4vw;
+    padding-left: 4vw;
+    padding-right: 2vw;
+  }
+
+  .contentDiv {
+    width: 100vw;
+    padding: 0px 0px 0px 8vw;
+    gap: 6vw;
+    height: 48vh;
+    scroll-snap-type: x mandatory;
+  }
+
+  .topRatedVideo {
+    scroll-snap-align: center;
+    width: 80vw;
+    height: 40vh;
+  }
+
+  .playmodification {
+    width: 80vw;
+  }
+
+  .videoDetails {
+    gap: 5px;
+    padding: 0px 2.7vw 0px 2.7vw !important;
+    border-radius: 15px;
+  }
+
+  .videoBtns {
+    width: 100%;
+    gap: 1.8vw;
+    margin-bottom: 1vh;
+  }
+
+  .WatchNowBtn {
+    font-size: 4vw;
+    width: 53vw;
+    height: 5vh;
+  }
+
+  .AddWatchList, .AddRating {
+    width: 10vw;
+    height: 5vh;
+    border: none;
+  }
+
+  .statistics {
+    gap: 3vw;
+  }
+
+  .videoTitle {
+    font-size: 3.5vw;
+  }
+  
+  .youtuber, .videoCount, .videoDuration, .YTrating {
+    font-size: 3.3vw;
+  }
+
+  .rightScrollBtn {
+    width: 9vw;
+    height: 22vh;
+    top: 12vh;
+    right: 0vw;
+  }
+
+  .leftScrollBtn {
+    width: 9vw;
+    height: 22vh;
+    top: 12vh;
+  }
+  
+}

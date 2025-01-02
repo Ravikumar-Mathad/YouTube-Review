@@ -1,0 +1,212 @@
+.ratingSystem {
+  background-color: #dcdcdc;
+  display: flex;
+  border: solid 1vw rgb(255, 255, 255);
+  border-radius: 15px;
+  width: 42vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  left: 30vw;
+  top: 9.5vh;
+  justify-content: center;
+  gap: 1vh;
+  z-index: 9999;
+  transition: transform 1s, opacity 1s;
+}
+
+
+.SlangofRating {
+  font-size: 4.5vw;
+  font-weight: bold;
+  line-height: 9.1vh;
+  letter-spacing: -3px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* From Uiverse.io by TheDuskPD */
+.rating {
+  display: inline-block;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  float: right;
+  cursor: pointer;
+  transition: color 0.3s;
+  color: rgb(136, 136, 136);
+}
+
+.rating label:before {
+  content: "\2605";
+  font-size: 5.5vw;
+}
+
+.ratingStars label:before {
+  content: "\2605";
+  font-size: 1.8vw;
+}
+
+.ratingStars {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: -0.3vh;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+  color: #000000;
+  transition: color 0.3s;
+}
+/* ############################################## */
+
+.ratingDistribution {
+  display: flex;
+  gap: 0.65vw;
+  width: 40vw;
+  height: 25vh;
+  justify-content: center;
+}
+
+.ratingNumbers,
+.ratingStars,
+.ratingLenght {
+  display: flex;
+  flex-direction: column;
+}
+
+.ratingNamber {
+  padding: 2vh 0px 0px 0px;
+  font-size: 7vw;
+  font-weight: bold;
+  line-height: 8vh;
+  letter-spacing: -3px;
+}
+
+.ratingNamber span {
+  position: relative;
+  font-size: 3vw;
+  color: rgb(95, 99, 104);
+}
+
+.totalRatings {
+  font-size: 1.1vw;
+}
+
+.totalRatings span {
+  font-size: 1.2vw;
+}
+
+.ratingNumbers {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.ratingNumbers p {
+  font-weight: 600;
+  font-size: 1.2vw;
+}
+
+.ratingLenght {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* gap: 4vh; */
+}
+
+.ratingLenght div {
+  height: 0.8vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: white;
+  width: 30vw;
+  border-radius: 15px;
+}
+
+.ratingLenght div div {
+  height: 0.8vh;
+  background-color: rgb(32, 30, 30);
+  border-radius: 15px;
+}
+
+@media screen and (max-width:1024px){
+  .ratingSystem {
+    width: 90vw;
+    height: 70vh;
+    left: 5vw;
+    top: 15vh;
+    border: solid 2vw rgb(255, 255, 255);
+  }
+
+  .SlangofRating {
+    font-size: 13vw;
+    line-height: 5vh;
+    margin-top: 1vh;
+  }
+
+  .rating label:before {
+    font-size: 14vw;
+  }
+  
+  .ratingStars label:before {
+    font-size: 7vw;
+  }
+  
+  .ratingStars {
+    margin-top: -0.5vh;
+  }
+
+  .ratingDistribution {
+    gap: 3vw;
+    width: 40vw;
+    height: 25vh;
+  }
+
+  .ratingNamber {
+    padding: 2vh 0px 0px 0px;
+    font-size: 19.5vw;
+    letter-spacing: 0.05vw;
+  }
+
+  .ratingNamber span {
+    font-size: 7.5vw;
+  }
+
+  .totalRatings {
+    font-size: 3.8vw;
+  }
+  
+  .totalRatings span {
+    font-size: 4.5vw;
+  }
+
+  .ratingNumbers p {
+    font-size: 4.2vw;
+  }
+
+  .ratingLenght div {
+    height: 0.9vh;
+    width: 54vw;
+  }
+
+  .ratingLenght div div {
+    height: 0.9vh;
+  }
+
+  .descriptionBottom{
+    font-size: 3.6vw;
+    letter-spacing: 1vw;
+  }
+}

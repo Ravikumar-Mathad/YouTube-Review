@@ -1,0 +1,53 @@
+.popContentDiv {
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  justify-content: flex-start;
+  gap: 2vw;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  padding-right: 41vw;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.popContentDiv::-webkit-scrollbar {
+  display: none;
+}
+
+.loadingElement {
+  margin-left: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popContent {
+  scroll-snap-align: start;
+  aspect-ratio: 16 / 9;
+  width: 100vw;
+  border-radius: 15px;
+  border: solid 1px rgba(255, 255, 255, 0.16);
+}
+
+@media screen and (max-width: 1024px) {
+  .popContentDiv {
+    width: 100vw;
+    height: 50vw;
+    display: flex;
+    justify-content: flex-start;
+    gap: 3vw;
+  }
+
+  .popContent {
+    aspect-ratio: 16 / 9;
+    width: 100vw;
+    height: 50vw;
+    border-radius: 15px;
+    border: solid 1px rgba(255, 255, 255, 0.16);
+  }
+
+  .loadingElement {
+    display: none;
+  }
+}

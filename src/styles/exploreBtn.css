@@ -1,0 +1,38 @@
+.exploreBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5vw;
+    background-color: black;
+    color: white;
+    font-size: 1.1vw;
+    padding: 2.5vh 1.2vw;
+    border-radius: 50px;
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+    border: none;
+    width: 9vw;
+    height: 5.3vh;
+}
+
+.removeLinkStyle{
+    text-decoration: none;
+}
+
+.exploreBtn:hover{
+    transform: scale(1.05);
+}
+
+.exploreBtn:active{
+    background-color: rgb(20, 20, 20);
+}
+
+@media screen and (max-width: 1024px) {
+    .exploreBtn {
+      gap: 2.5vw;
+      font-size: 4.2vw;
+      width: 35vw;
+      height: 5vh;
+    }
+  }

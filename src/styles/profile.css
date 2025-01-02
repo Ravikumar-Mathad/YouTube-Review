@@ -1,0 +1,393 @@
+.profilePage {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-color: #dcdcdc;
+  padding: 1.2vw;
+  justify-content: space-around;
+  padding-top: 5vw;
+}
+
+.dashboard {
+  width: 23vw;
+  height: 88vh;
+  border: solid 1px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1vw;
+}
+
+.profilePic {
+  border: solid 1px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 15vw;
+  height: 15vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileImg {
+  border-radius: 50%;
+  width: 14.8vw;
+  height: 14.8vw;
+}
+
+.userName {
+  font-size: 1.8vw;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.dashline {
+  width: 20.5vw;
+  height: 0.1vh;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dashDict {
+  font-size: 1vw;
+  color: rgba(0, 0, 0, 0.6);
+  align-self: flex-start;
+}
+
+.dashBoardBtn {
+  width: 20vw;
+  height: 7vh;
+  border: solid 1px rgba(0, 0, 0, 0.5);
+  border-radius: 50px;
+  font-size: 1.25vw;
+  letter-spacing: -0.5px;
+  color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.dashBoardBtn:hover {
+  transform: scale(1.01);
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.dashBoardBtn:active {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* ########################### feedback ######################## */
+
+.combine {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  height: 88vh;
+  width: 72.5;
+  gap: 2vh;
+}
+
+.feedback {
+  position: relative;
+  width: 72.5vw;
+  height: 30vh;
+  border: solid 1px rgba(0, 0, 0, 0.5);
+  background-color: rgb(0, 0, 0);
+  border-radius: 15px;
+  z-index: 2;
+  padding: 0px 0px 1vw 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.feedback form {
+  height: 4.3vh;
+  width: 58vw;
+  position: relative;
+  display: flex;
+}
+
+.feedbackStatement {
+  width: 62vw;
+  font-size: 3.6vw;
+  color: white;
+  letter-spacing: -1px;
+}
+
+.feedbackbackgroundVideo {
+  height: 29.9vh;
+  position: absolute;
+  right: 0;
+  border-radius: 15px;
+  z-index: -1;
+  top: 0;
+}
+
+.feedbackText {
+  width: 58vw;
+  height: 4.3vh;
+  background: none;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.2vw;
+  border: none;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.5);
+  padding-right: 6.6vw;
+}
+
+.feedbackText:focus {
+  outline: none;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.8);
+}
+
+.submitbtn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4vh 1.2vw 0.4vh 1.2vw;
+  font-size: 1.1vw;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255);
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  border: none;
+}
+
+.submitbtn:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.submitbtn:active {
+  background-color: rgba(255, 255, 255);
+}
+
+.watchlistSection {
+  border: solid 1px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  width: 72.5vw;
+  height: 56vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1.2vw;
+  gap: 1vh;
+}
+
+.watchListDivName {
+  font-size: 1.6vw;
+  letter-spacing: -0.2px;
+  display: flex;
+  gap: 0.5vw;
+  align-items: center;
+}
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+.dashboardError{
+  width: 23vw;
+  height: 88vh;
+  border: solid 1px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vw 1vw 2vw 1vw;
+  background-color: rgb(218, 218, 218);
+}
+
+.workInProgress{
+  width: 17vw;
+  height: 17vw;
+}
+
+.errorHeadLine{
+  font-weight: 600;
+  font-size: 2vw;
+  letter-spacing: -1px;
+}
+
+.errorDiscription{
+  font-size: 1.1vw;
+  text-align: center;
+  line-height: 1.5vw;
+}
+
+.userSureBtn{
+  color: rgb(224, 224, 224);
+  background-color: rgb(0, 0, 0);
+  padding: 0.6vw 5vw;
+  border-radius: 1vw;
+  font-size: 1.4vw;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.userSureBtn:hover {
+  background-color: rgb(10, 10, 10);
+}
+
+.userSureBtn:active {
+  background-color: rgb(0, 0, 0);
+}
+
+
+@media screen and (max-width: 1024px) {
+  .profilePage {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    padding: 3vw;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 9vh;
+  }
+
+  .dashboard {
+    width: 94vw;
+    height: 90.5vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 4vw;
+  }
+
+  .profilePic {
+    width: 60vw;
+    height: 60vw;
+  }
+
+  .profileImg {
+    width: 59vw;
+    height: 59vw;
+  }
+
+  .userName {
+    font-size: 8vw;
+  }
+
+  .dashline {
+    width: 85vw;
+    height: 0.15vh;
+  }
+
+  .dashDict {
+    font-size: 3.5vw;
+  }
+
+  .dashBoardBtn {
+    width: 82vw;
+    height: 7vh;
+    font-size: 4.5vw;
+  }
+
+
+  .feedback {
+    width: 95vw;
+    height: 26vh;
+    padding: 5vw 3vw 6vw 3vw;
+    justify-content: space-between;
+  }
+
+  .feedback form {
+    height: 3vh;
+    width: 88vw;
+  }
+  
+  .feedbackStatement {
+    width: 85vw;
+    font-size: 6.5vw;
+  }
+  
+  .feedbackbackgroundVideo {
+    height: 25.9vh;
+    width: 95vw;
+    right: -1px;
+  }
+
+  .feedbackText {
+    width: 90vw;
+    font-size: 3.5vw;
+  }
+
+  .submitbtn {
+    padding: 0.2vh 4vw 0.2vh 4vw;
+    font-size: 3.4vw;
+  }
+
+  .combine {
+    justify-content: space-between;
+    height: 100%;
+    width: 100vw;
+    align-items: center;
+    padding-top: 10vw;
+    gap: 3vh;
+  }
+
+  .watchlistSection {
+    border: solid 1px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    width: 95vw;
+    height: 96vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2vh 0vw 4vh 2.5vw;
+    gap: 1vh;
+    align-self: center;
+  }
+  
+  .watchListDivName {
+    font-size: 5vw;
+    letter-spacing: -0.2px;
+    display: flex;
+    gap: 1.8vw;
+    align-items: center;
+  }
+
+  /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+  .dashboardError{
+    width: 94vw;
+    height: 90vh;
+    border: solid 1px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10vw 3vw 10vw 3vw;
+    background-color: rgb(218, 218, 218);
+  }
+  
+  .workInProgress{
+    width: 70vw;
+    height: 70vw;
+  }
+  
+  .errorHeadLine{
+    font-weight: 600;
+    font-size: 8vw;
+    letter-spacing: -1px;
+  }
+  
+  .errorDiscription{
+    font-size: 5vw;
+    text-align: center;
+    line-height: 6vw;
+  }
+  
+  .userSureBtn{
+    color: rgb(224, 224, 224);
+    background-color: rgb(0, 0, 0);
+    padding: 3vw 22vw;
+    border-radius: 15px;
+    font-size: 6vw;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+}

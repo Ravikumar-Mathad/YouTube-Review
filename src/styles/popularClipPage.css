@@ -1,0 +1,100 @@
+.popularPage {
+  width: 100vw;
+  height: 117vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  background-color: black;
+  padding: 4vw 0px 5vh 6vh;
+  gap: 3vh;
+  overflow: hidden;
+}
+
+.popStatement {
+  font-size: 3.6vw;
+  line-height: 2.5vw;
+  letter-spacing: -2px;
+  color: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  font-weight: 400;
+}
+
+.popDisc {
+  font-size: 1.4vw;
+  line-height: 1.75vw;
+  color: rgba(255, 255, 255, 0.5);
+  width: 59vw;
+  margin-bottom: 2vh;
+}
+
+.NavigateBtns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+}
+
+.nextBtn {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: solid 1px rgba(255, 255, 255, 0.1);
+  width: 12vw;
+  height: 3.2vw;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nextBtn:hover {
+  transform: scale(1.02);
+}
+
+.nextBtn:active {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+@media screen and (max-width: 1024px) {
+  .popularPage {
+    width: 100vw;
+    height: 62vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 8vw 0px 0px 5vw;
+  }
+
+  .popStatement {
+    font-size: 9vw;
+    line-height: 9vw;
+    letter-spacing: -2px;
+    color: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    font-weight: 400;
+  }
+
+  .popDisc {
+    font-size: 4vw;
+    line-height: 4vw;
+    color: rgba(255, 255, 255, 0.5);
+    width: 77vw;
+    margin-bottom: 2vh;
+  }
+
+  .nextBtn {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: solid 1px rgba(255, 255, 255, 0.1);
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .NavigateBtns {
+    gap: 4vw;
+  }
+}

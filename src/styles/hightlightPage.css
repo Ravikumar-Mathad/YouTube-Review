@@ -1,0 +1,95 @@
+.hightlightPage{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+    border-bottom: solid 0.7px rgba(255, 255, 255, 0.12);
+}
+
+.backgroundVideo{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    right: -7vw;
+    top: 0;
+    opacity: 1;
+}
+
+.SecondHeader{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+    color: white;
+    padding-left: 2.7vw;
+    gap: 10vh;
+}
+
+.webStatement{
+    font-size: 4vw;
+    color: rgba(240, 240, 240);
+    line-height: 9.2vh;
+    letter-spacing: -2.5px;
+    font-weight: 400;
+    word-spacing: 3px;
+    width: 60vw;
+}
+
+.hgtColor{
+    color: rgba(255, 255, 255, 0.3);
+    padding-left: 10px;
+}
+
+.missionStatement{
+    font-size: 1.55vw;
+    line-height: 3.8vh;
+    letter-spacing: 0px;
+    font-weight: 400;
+    width: 49vw;
+}
+
+
+@media screen and (max-width:1024px){
+
+    .hightlightPage{
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(0, 0, 0);
+        border-radius: 18px 18px 0px 0px;
+    }
+
+    .webStatement{
+        font-size: 9vw !important;
+        letter-spacing: -2px;
+        line-height: 10.7vw;
+        font-size: 10vw;
+        width: 90vw;
+        text-align: left;
+    }
+
+    .SecondHeader{
+        padding-left: 5vw;
+    }
+
+    .missionStatement{
+        font-size: 19px;
+        line-height: 2.6vh;
+        letter-spacing: 0px;
+        font-weight: 400;
+        width: 90vw;
+    }
+
+    .backgroundVideo{
+        width: 180%;
+        height: 100vh;
+        position: absolute;
+        right: -7vw;
+        top: -220px;
+        opacity: 0.5;
+    }
+}

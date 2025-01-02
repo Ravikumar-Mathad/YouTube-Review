@@ -1,0 +1,99 @@
+.splitContent{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: #DCDCDC;
+}
+
+.ContentImg{
+    width: 29vw;
+    height: 91vh;
+}
+
+.mainContent{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 2.7vw;
+    width: 100vw;
+    height: 91vh;
+}
+
+.mainLine{
+    font-size: 6.26vw;
+    line-height: 15vh;
+    letter-spacing: -5.54px;
+    font-weight: 400;
+}
+
+.productStatement{
+    width: 60.vw;
+    height: 41vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.description{
+    font-size: 1.45vw !important;
+    font-weight: 500 !important;
+    line-height: 4vh !important;
+    letter-spacing: 0.5px !important;
+    color: rgb(95, 99, 100) !important;
+    width: 100% !important;
+}
+
+
+.helpbtns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width:1024px){
+    .ContentImg{
+        display: none;
+    }
+
+    .mainLine{
+        font-size: 45px;
+        line-height: 50px;
+        letter-spacing: -2px;
+    }
+
+    .description{
+        font-size: 16px !important;
+        line-height: 20px !important;
+    }
+
+    .mainContent{
+        padding: 20px 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-direction: column;
+        height: 92vh;
+    }
+
+    .splitContent{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .helpbtns{
+        margin-top: -20px;
+    }
+
+    .productStatement{
+        height: 33vh;
+    }
+
+}

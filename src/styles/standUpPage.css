@@ -1,0 +1,682 @@
+.standUpPage {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 9vh;
+  background-color: rgb(6, 6, 6);
+}
+
+.standupContentSection {
+  width: 100vw;
+  height: 91vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vw;
+}
+
+.videoAndControls {
+  width: 62vw;
+  height: 87vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.playlistFeedSection {
+  height: 87vh;
+  width: 32.6vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: solid 1px rgba(220, 220, 220, 0.2);
+  border-radius: 1vw;
+  padding: 1.5vw;
+  gap: 2.5vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.playlistFeedSection::-webkit-scrollbar {
+  width: 5px;
+  scroll-behavior: smooth;
+}
+
+.playlistFeedSection::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 1vw;
+}
+
+.playlistFeedSection::-webkit-scrollbar-track {
+  background: none;
+  border-radius: 1vw;
+}
+
+.playlistFeedSection::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.videoDisplayDiv {
+  width: 62vw;
+  height: 72vh;
+  border-radius: 1vw;
+  aspect-ratio: 16 / 9;
+}
+
+.videoDisplay {
+  width: 62vw;
+  height: 72vh;
+  border: solid 1px rgba(220, 220, 220, 0.2);
+  border-radius: 1vw;
+  aspect-ratio: 16 / 9;
+}
+
+.controlBtns {
+  width: 62vw;
+  height: 14vh;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleAndViewsSection {
+  width: 62vw;
+  height: 6vh;
+  border-radius: 1vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0vh 0.5vw 0vh 0.5vw;
+}
+
+.mainVideoTitle {
+  color: white;
+  font-size: 1.5vw;
+  letter-spacing: -0.5px;
+}
+
+.mainVideoViews {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9vw;
+}
+
+.channelAndBtnSection {
+  width: 62vw;
+  height: 8vh;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0vh 0.5vw 0vh 0.5vw;
+}
+
+.channelSection {
+  border-radius: 15px;
+  width: 30vw;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  /* justify-content: space-between; */
+}
+
+.channelImgDiv {
+  border-radius: 50%;
+  width: 3.5vw;
+  height: 3.5vw;
+}
+
+.channelImg {
+  border: solid 1px rgba(220, 220, 220, 0.2);
+  border-radius: 50%;
+  width: 3.5vw;
+  height: 3.5vw;
+}
+
+.channelNameAndSubscribers {
+  border-radius: 15px;
+  height: 8vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.3vh;
+}
+
+.channelNameAndSubscribers a{
+  text-decoration: none;
+}
+
+.mainChannelName {
+  color: white;
+  font-size: 1.05vw;
+}
+
+.mainChannelSubscribers {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9vw;
+}
+
+.maincontrolBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5vw;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-size: 0.95vw;
+  padding: 0.9vh 1vw;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  border: none;
+  border: solid 1px rgba(220, 220, 220, 0.2);
+  border-radius: 1vw;
+}
+
+.maincontrolBtn:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.maincontrolBtn:active {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.userControlSection {
+  border-radius: 15px;
+  width: 25vw;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  gap: 0.6vw;
+}
+
+.mainplaylistVideo {
+  border-radius: 1vw;
+  width: 30vw;
+  height: 16vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.mainplaylistVideo:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.mainPlaylistTumnailDiv {
+  border-radius: 1vw;
+  width: 13.75vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  aspect-ratio: 16 / 9;
+}
+
+.mainPlaylistTumnail {
+  border: solid 1px rgba(220, 220, 220, 0.2);
+  border-radius: 1vw;
+  width: 13.75vw;
+  aspect-ratio: 16 / 9;
+}
+
+.mainPlaylistTumnailDetails {
+  border-radius: 1vw;
+  height: 16vh;
+  width: 15.5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1vh;
+}
+
+.mainPlayListTumbnailTitle {
+  color: white;
+  font-size: 1.2vw;
+}
+
+.mainPlayListTumbnailYoutuber,
+.mainPlayListTumbnailViews,
+.mainPlayListTumbnailDuration {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1vw;
+}
+
+.mainPlayListTumbnailViewsAndDurationDiv {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1vw;
+  width: 15.5vw;
+}
+
+.commentSectionDiv {
+  width: 100vw;
+  height: 100%;
+  padding: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.commentSection {
+  width: 96vw;
+  height: 100%;
+  border: solid 1px rgba(220, 220, 220, 0.2);
+  border-radius: 1vw;
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 1vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2vh;
+}
+
+.commentFormDiv {
+  width: 94vw;
+  height: 8vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1vw;
+}
+
+.userCommentPic {
+  border: solid 1px rgba(220, 220, 220, 0.2);
+  border-radius: 50%;
+  width: 3vw;
+  height: 3vw;
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6vw;
+}
+
+.commentForm {
+  position: relative;
+}
+
+.commentText {
+  width: 56.5vw;
+  height: 4.5vh;
+  background: none;
+  border: none;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.08vw;
+  padding-right: 13vw;
+}
+
+.commentText:focus {
+  outline: none;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.8);
+}
+
+.commentSubmitBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4vh 1.2vw 0.4vh 1.2vw;
+  font-size: 1.1vw;
+  border-radius: 1vw;
+  background-color: rgba(255, 255, 255);
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  border: none;
+}
+
+.commentSubmitBtn:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.commentSubmitBtn:active {
+  background-color: rgba(255, 255, 255);
+}
+
+.commentCancelBtn {
+  position: absolute;
+  top: 0;
+  right: 6.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4vh 1.3vw 0.4vh 1.3vw;
+  font-size: 1.1vw;
+  border-radius: 1vw;
+  background: none;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  border: none;
+  color: white;
+  border: solid 1px rgba(255, 255, 255, 0.2);
+}
+
+.commentCancelBtn:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.commentCancelBtn:active {
+  background: none;
+}
+
+.allCommentsDiv {
+  width: 94vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+}
+
+.commentDisplayFormat {
+  display: flex;
+  width: 94vw;
+  gap: 0.7vw;
+  border-radius: 1vw;
+  padding: 1.6vh 0.7vw;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.commentDisplayFormat:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.commentDisplayFormat:hover .deleteComment {
+  opacity: 1;
+}
+
+.userCommentFormat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5vh;
+}
+
+.commentUserName {
+  color: white;
+  font-size: 1.2vw;
+  width: 84vw;
+}
+
+.userComment {
+  width: 84vw;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.05vw;
+  word-wrap: break-word;
+}
+
+.commentTitle {
+  color: white;
+  font-size: 1.5vw;
+  width: 94vw;
+  display: flex;
+  gap: 0.5vw;
+}
+
+.deleteComment {
+  opacity: 0;
+  width: 2.8vw;
+  height: 2.8vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  outline: none;
+  border: none;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.deleteComment:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.03);
+}
+
+.deleteComment:active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media screen and (max-width: 1024px) {
+  .standUpPage {
+    padding-top: 8vh;
+  }
+
+  .standupContentSection {
+    width: 100vw;
+    height: 100%;
+    flex-direction: column;
+    padding: 0.4vh 0vw;
+  }
+
+  .videoAndControls {
+    width: 100vw;
+    height: auto;
+  }
+
+  .videoDisplayDiv {
+    width: 97vw;
+    height: auto;
+  }
+
+  .videoDisplay {
+    width: 97vw;
+    height: auto;
+  }
+
+  .controlBtns {
+    width: 97vw;
+    height: auto;
+    justify-content: flex-start;
+    padding-top: 1vh;
+  }
+
+  .titleAndViewsSection {
+    width: 97vw;
+    height: auto;
+  }
+
+  .mainVideoTitle {
+    font-size: 4.2vw;
+  }
+
+  .channelAndBtnSection {
+    width: 97vw;
+    height: auto;
+    flex-direction: column;
+    padding: 0.5vh 0.5vw;
+  }
+
+  .channelSection {
+    width: 97vw;
+    height: auto;
+    gap: 2vw;
+    padding: 0vh 2vw 0vh 0.5vw;
+  }
+
+  .channelImgDiv {
+    width: 11.5vw;
+    height: 11.5vw;
+  }
+
+  .channelImg {
+    width: 11.5vw;
+    height: 11.5vw;
+  }
+
+  .channelNameAndSubscribers {
+    height: auto;
+    gap: 0.5vh;
+    padding: 1.3vh 0vw;
+  }
+
+  .mainChannelName {
+    font-size: 3.2vw;
+  }
+
+  .mainChannelSubscribers {
+    font-size: 2.8vw;
+  }
+
+  .maincontrolBtn {
+    gap: 1.5vw;
+    font-size: 3.2vw;
+    padding: 0.75vh 5vw;
+    border-radius: 15px;
+  }
+
+  .selfEnd{
+    margin-left: auto;
+  }
+
+  .userControlSection {
+    width: 97vw;
+    height: auto;
+    gap: 2vw;
+    justify-content: center;
+    padding: 0.7vh 0vw;
+  }
+
+  .playlistFeedSection {
+    height: 75vh;
+    width: 100vw;
+    gap: 1vh;
+  }
+
+  .playlistFeedSection::-webkit-scrollbar {
+    display: none;
+  }
+  /* ################################################## */
+  .mainplaylistVideo {
+    border-radius: 1vw;
+    width: 96vw;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    flex-direction: column;
+  }
+
+  .mainplaylistVideo:hover {
+    background: none;
+  }
+
+  .mainPlaylistTumnailDiv {
+    border-radius: 15px;
+    width: 96vw;
+  }
+
+  .mainPlaylistTumnail {
+    border-radius: 15px;
+    width: 96vw;
+  }
+
+  .mainPlaylistTumnailDetails {
+    border-radius: 15px;
+    height: auto;
+    width: 96vw;
+    gap: 0.6vh;
+    padding: 0.8vh 1vw;
+  }
+
+  .mainPlayListTumbnailTitle {
+    font-size: 4.6vw;
+  }
+
+  .mainPlayListTumbnailYoutuber,
+  .mainPlayListTumbnailViews,
+  .mainPlayListTumbnailDuration {
+    width: auto;
+    font-size: 3.5vw;
+  }
+
+  .mainPlayListTumbnailViewsAndDurationDiv {
+    gap: 3vw;
+    width: auto;
+  }
+
+  /* ################################################################### */
+
+  .commentSection {
+    border-radius: 15px;
+    padding: 3vw;
+    gap: 1vh;
+  }
+
+  .commentFormDiv {
+    width: 90vw;
+    height: 6vh;
+    gap: 3vw;
+  }
+
+  .userCommentPic {
+    width: 8vw;
+    height: 8vw;
+    font-size: 4vw;
+  }
+
+  .commentText {
+    width: 78vw;
+    height: 3.5vh;
+    font-size: 3.5vw;
+    padding-right: 30vw;
+  }
+
+  .commentSubmitBtn {
+    padding: 0.4vh 2vw;
+    font-size: 3vw;
+    border-radius: 15px;
+  }
+
+  .commentCancelBtn {
+    right: 15vw;
+    padding: 0.4vh 2vw;
+    font-size: 3vw;
+    border-radius: 15px;
+  }
+
+  .allCommentsDiv {
+    width: 90vw;
+    gap: 1.5vh;
+  }
+
+  .commentDisplayFormat {
+    display: flex;
+    width: 90vw;
+    gap: 3vw;
+    border-radius: 15px;
+    padding: 1.6vh 2vw;
+  }
+
+  .commentUserName {
+    font-size: 3.2vw;
+    width: 67vw;
+  }
+
+  .userComment {
+    width: 67vw;
+    font-size: 2.7vw;
+  }
+
+  .commentTitle {
+    font-size: 4vw;
+    width: 90vw;
+    gap: 2vw;
+  }
+}
