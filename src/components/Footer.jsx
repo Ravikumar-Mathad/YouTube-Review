@@ -202,7 +202,7 @@ const Footer = forwardRef((props, ref) => {
       <div className="horizonatlLine"></div>
       <div className="copyright">
         <FontAwesomeIcon icon={faCopyright} style={{ color: "#000000" }} />
-        2024 Ravikumar Mathad
+        2025 Ravikumar Mathad
       </div>
     </div>
   );
