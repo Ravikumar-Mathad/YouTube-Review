@@ -73,6 +73,7 @@
     .description{
         font-size: 16px !important;
         line-height: 20px !important;
+        width: 90vw;
     }
 
     .mainContent{
