@@ -90,64 +90,103 @@ const CreatorsPage = (props) => {
     setloading(true);
     try {
       const maxResults = videoIndex + 1 > 20 ? videoIndex + 1 : 20;
-      const Response = await axios.get(
-        `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${PLAYLIST_ID}&key=${API_KEY}&maxResults=${maxResults}&pageToken=${Pagetoken}`
+      const firstBatchLimit = 45;
+
+      let allItems = [];
+
+      // First API call for up to 50 videos
+      const firstResponse = await axios.get(
+        `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${PLAYLIST_ID}&key=${API_KEY}&maxResults=${Math.min(
+          firstBatchLimit,
+          maxResults
+        )}&pageToken=${Pagetoken}`
       );
 
-      const videoIds = Response.data.items.map(
-        (item) => item.snippet.resourceId.videoId
-      );
+      allItems = [...firstResponse.data.items];
 
-      const statResponse = await axios.get(
-        `https://www.googleapis.com/youtube/v3/videos?part=statistics,contentDetails&id=${videoIds.join(
-          ","
-        )}&key=${API_KEY}`
-      );
+      // If videoIndex > 50, fetch the remaining items
+      if (maxResults > firstBatchLimit && firstResponse.data.nextPageToken) {
+        const secondResponse = await axios.get(
+          `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${PLAYLIST_ID}&key=${API_KEY}&maxResults=${
+            maxResults - firstBatchLimit
+          }&pageToken=${firstResponse.data.nextPageToken}`
+        );
 
-      const channelIds = Response.data.items.map(
+        allItems = [...allItems, ...secondResponse.data.items];
+      }
+
+      // Map the combined results to fetch video statistics
+      const videoIds = allItems.map((item) => item.snippet.resourceId.videoId);
+
+      // Split videoIds into batches of 50
+      const videoIdBatches = [];
+      for (let i = 0; i < videoIds.length; i += 50) {
+        videoIdBatches.push(videoIds.slice(i, i + 50));
+      }
+
+      let statsMap = {};
+      // Fetch video statistics for each batch of video IDs
+      for (let batch of videoIdBatches) {
+        const statResponse = await axios.get(
+          `https://www.googleapis.com/youtube/v3/videos?part=statistics,contentDetails&id=${batch.join(
+            ","
+          )}&key=${API_KEY}`
+        );
+        statResponse.data.items.forEach((item) => {
+          statsMap[item.id] = {
+            viewCount: item.statistics.viewCount,
+            duration: item.contentDetails.duration,
+          };
+        });
+      }
+
+      // Fetch the channel details (Subscriber count, channel image)
+      const channelIds = allItems.map(
         (item) => item.snippet.videoOwnerChannelId
       );
+      const channelIdBatches = [];
+      for (let i = 0; i < channelIds.length; i += 50) {
+        channelIdBatches.push(channelIds.slice(i, i + 50));
+      }
 
-      const channelResponse = await axios.get(
-        `https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=${channelIds.join(
-          ","
-        )}&key=${API_KEY}`
-      );
+      let channelMap = {};
+      // Fetch channel statistics for each batch of channel IDs
+      for (let batch of channelIdBatches) {
+        const channelResponse = await axios.get(
+          `https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=${batch.join(
+            ","
+          )}&key=${API_KEY}`
+        );
+        channelResponse.data.items.forEach((item) => {
+          channelMap[item.id] = {
+            SubscriberCount: item.statistics.subscriberCount,
+            channelImg: item.snippet.thumbnails.default.url,
+          };
+        });
+      }
 
-      const statsMap = statResponse.data.items.reduce((acc, item) => {
-        acc[item.id] = {
-          viewCount: item.statistics.viewCount,
-          duration: item.contentDetails.duration,
-        };
-        return acc;
-      }, {});
-
-      const channelMap = channelResponse.data.items.reduce((acc, item) => {
-        acc[item.id] = {
-          SubscriberCount: item.statistics.subscriberCount,
-          channelImg: item.snippet.thumbnails.default.url,
-        };
-        return acc;
-      }, {});
-
-      const tumbnailsWithStats = Response.data.items.map((item) => ({
+      // Combine statistics, channel info, and thumbnails
+      const tumbnailsWithStats = allItems.map((item) => ({
         ...item.snippet,
-        viewCount: statsMap[item.snippet.resourceId.videoId].viewCount || "N/A",
-        duration: statsMap[item.snippet.resourceId.videoId].duration || "N/A",
+        viewCount:
+          statsMap[item.snippet.resourceId.videoId]?.viewCount || "N/A",
+        duration: statsMap[item.snippet.resourceId.videoId]?.duration || "N/A",
         SubscriberCount:
-          channelMap[item.snippet.videoOwnerChannelId].SubscriberCount || "N/A",
+          channelMap[item.snippet.videoOwnerChannelId]?.SubscriberCount ||
+          "N/A",
         channelImg:
-          channelMap[item.snippet.videoOwnerChannelId].channelImg || "N/A",
+          channelMap[item.snippet.videoOwnerChannelId]?.channelImg || "N/A",
       }));
 
+      // Update the state with the new thumbnails and statistics
       setTumbnails((prevTumbnails) => [
         ...prevTumbnails,
         ...tumbnailsWithStats,
       ]);
 
-      setNextPageToken(Response.data.nextPageToken || null);
+      setNextPageToken(firstResponse.data.nextPageToken || null);
     } catch (error) {
-      console.log("error while fetching:", { error });
+      console.error("Error while fetching:", error);
     }
     setloading(false);
   };
@@ -492,7 +531,10 @@ const CreatorsPage = (props) => {
               Comments: <span>{(commentBox[currentVideoId] || []).length}</span>
             </p>
             {(commentBox[currentVideoId] || []).map((comment, index) => (
-              <div className="commentDisplayFormat" key={index + "creatorsPage"}>
+              <div
+                className="commentDisplayFormat"
+                key={index + "creatorsPage"}
+              >
                 <div className="userCommentPic">
                   {props.FinaluserName.slice(0, 1)}
                 </div>
