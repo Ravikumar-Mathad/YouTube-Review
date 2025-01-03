@@ -70,7 +70,7 @@ function App() {
       />
       <Routes>
         <Route
-          index
+          path="/"
           element={
             <HomePage
               footerRef={footerRef}
