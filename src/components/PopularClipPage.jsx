@@ -5,7 +5,7 @@ import {
   faArrowLeftLong,
   faArrowRightLong,
 } from "@fortawesome/free-solid-svg-icons";
-import "../styles/PopularClipPage.css";
+import "../styles/popularClipPage.css";
 
 const PopularClipPage = () => {
   const contentScrollref = useRef();
