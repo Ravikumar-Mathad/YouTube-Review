@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import { NavLink } from "react-router-dom";
-import "../styles/scrollcontent.css";
+import "../styles/scrollContent.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronRight,
