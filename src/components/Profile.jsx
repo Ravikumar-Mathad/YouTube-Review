@@ -5,6 +5,7 @@ import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 import BookmarkList from "./BookmarkList";
 import profileAlter from '../assets/profile alter image.png'
 import userProfile from '../assets/profile Pic.webp'
+import feedbackBackground from '../assets/BioBackGround.mp4'
 
 const Profile = (props) => {
   const [messegeCard, setmessegeCard] = useState(false);
@@ -80,7 +81,7 @@ const Profile = (props) => {
             muted
             autoPlay
             className="feedbackbackgroundVideo"
-            src="src\assets\BioBackGround.mp4"
+            src={feedbackBackground}
           />
           <p className="feedbackStatement">
             Tell us what you think about our concept and site!
