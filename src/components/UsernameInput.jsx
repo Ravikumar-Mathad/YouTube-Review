@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/userinput.css";
+import userNameImage from '../assets/userName image.png'
 
 const UsernameInput = (props) => {
   const [inputValue, setinputValue] = useState("");
@@ -23,7 +24,7 @@ const UsernameInput = (props) => {
       <form onSubmit={handleSubmit} className="userInputBox">
         <img
           className="userinputAnimated"
-          src="src\assets\userName image.png"
+          src={userNameImage}
           alt="userinput"
         />
         <p>Hey! What name do you go by?</p>

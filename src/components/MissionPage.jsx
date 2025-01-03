@@ -1,11 +1,12 @@
 import React from "react";
 import "../styles/hightlightPage.css";
+import missionBackground from '../assets/Background video.mp4'
 
 const MissionPage = () => {
   return (
     <div className="hightlightPage">
       <video
-        src="src\assets\Background video.mp4"
+        src={missionBackground}
         autoPlay
         loop
         muted

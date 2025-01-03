@@ -3,6 +3,10 @@ import { NavLink } from "react-router-dom";
 import ExploreBtn from "./ExploreBtn";
 import ContactUsBtn from "./ContactUsBtn";
 import "../styles/categoriesPage.css";
+import standUpLogo from '../assets/stand up logo.png'
+import podcastLogo from '../assets/podcast logo.png'
+import coursesLogo from '../assets/courses logo.png'
+import fitnessLogo from '../assets/fitness_logo new.png'
 
 const CategoriesPage = (props) => {
   return (
@@ -26,7 +30,7 @@ const CategoriesPage = (props) => {
           <div className="largeNav">
             <img
               className="standUpLogo"
-              src="src\assets\stand up logo.png"
+              src={standUpLogo}
               alt="standup-logo"
             />
             <div className="catgDetails">
@@ -42,7 +46,7 @@ const CategoriesPage = (props) => {
           <div className="largeNav">
             <img
               className="podcastLogo"
-              src="src\assets\podcast logo.png"
+              src={podcastLogo}
               alt="podcast-logo"
             />
             <div className="catgDetails">
@@ -58,7 +62,7 @@ const CategoriesPage = (props) => {
           <div className="largeNav">
             <img
               className="coursesLogo"
-              src="src\assets\courses logo.png"
+              src={coursesLogo}
               alt="courses-logo"
             />
             <div className="catgDetails">
@@ -74,7 +78,7 @@ const CategoriesPage = (props) => {
           <div className="largeNav">
             <img
               className="creatorsLogo"
-              src="src\assets\fitness_logo new.png"
+              src={fitnessLogo}
               alt="creators-logo"
             />
             <div className="catgDetails">

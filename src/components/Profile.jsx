@@ -3,6 +3,8 @@ import "../styles/profile.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 import BookmarkList from "./BookmarkList";
+import profileAlter from '../assets/profile alter image.png'
+import userProfile from '../assets/profile Pic.webp'
 
 const Profile = (props) => {
   const [messegeCard, setmessegeCard] = useState(false);
@@ -30,7 +32,7 @@ const Profile = (props) => {
         <div className="dashboardError">
           <img
             className="workInProgress"
-            src="src\assets\profile alter image.png"
+            src={profileAlter}
             alt="work in progress"
           />
           <p className="errorHeadLine">Work in Progress!</p>
@@ -49,7 +51,7 @@ const Profile = (props) => {
           <div className="profilePic">
             <img
               className="profileImg"
-              src="src\assets\profile Pic.webp"
+              src={userProfile}
               alt="profilepic"
             />
           </div>

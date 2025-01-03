@@ -1,8 +1,9 @@
-import React, {useRef} from "react";
+import React from "react";
 import "../styles/mainPage.css";
 import ExploreBtn from "./ExploreBtn";
 import ContactUsBtn from "./ContactUsBtn";
 import RatingPreview from './RatingPreview'
+import mainPageImage from '../assets/main image.png'
 
 const Mainpage = (props) => {
   return (
@@ -26,7 +27,7 @@ const Mainpage = (props) => {
         </div>
         <RatingPreview />
       </main>
-      <img className="ContentImg" src="src\assets\main image.png" alt="ContentImg" />
+      <img className="ContentImg" src={mainPageImage} alt="ContentImg" />
     </div>
   );
 };

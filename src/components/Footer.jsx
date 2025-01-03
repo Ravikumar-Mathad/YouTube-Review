@@ -7,6 +7,9 @@ import {
   faAnglesRight,
 } from "@fortawesome/free-solid-svg-icons";
 import { faCopyright, faClock } from "@fortawesome/free-regular-svg-icons";
+import resume from '../assets/RaviKumar Mathad Resume 2025.pdf'
+import destopBioBackground from '../assets/BioBackGround.mp4'
+import mobileBioBackground from '../assets/background for mobile.mp4'
 
 const Footer = forwardRef((props, ref) => {
   const [protfolioState, setprotfolioState] = useState(false);
@@ -24,14 +27,14 @@ const Footer = forwardRef((props, ref) => {
     <div ref={ref} className="footer">
       <div className="bioDiv">
         <video
-          src="src\assets\BioBackGround.mp4"
+          src={destopBioBackground}
           autoPlay
           loop
           muted
           className="BiobackgroundVideo"
         />
         <video
-          src="src\assets\background for mobile.mp4"
+          src={mobileBioBackground}
           autoPlay
           loop
           muted
@@ -67,7 +70,7 @@ const Footer = forwardRef((props, ref) => {
           </button>
           {ResumeBtn && (
             <a
-              href="src\assets\RaviKumar Mathad Resume 2025.pdf"
+              href={resume}
               download="RaviKumar_Mathad_Resume_2025.pdf"
             >
               <button className="Btn">
