@@ -31,7 +31,7 @@
 }
 
 .productStatement{
-    width: 60.vw;
+    width: 68vw;
     height: 41vh;
     display: flex;
     justify-content: center;
@@ -40,13 +40,13 @@
     gap: 20px;
 }
 
-.description{
-    font-size: 1.45vw !important;
-    font-weight: 500 !important;
-    line-height: 4vh !important;
-    letter-spacing: 0.5px !important;
-    color: rgb(95, 99, 100) !important;
-    width: 100% !important;
+.Pdescription{
+    font-size: 1.45vw;
+    font-weight: 500;
+    line-height: 4vh;
+    letter-spacing: 0.5px;
+    color: rgb(95, 99, 100);
+    width: 100%;
 }
 
 
@@ -69,10 +69,13 @@
         letter-spacing: -2px;
         width: 90vw;
     }
+    .productStatement{
+        width: 90vw;
+    }
 
-    .description{
-        font-size: 16px !important;
-        line-height: 20px !important;
+    .Pdescription{
+        font-size: 16px;
+        line-height: 20px;
         width: 90vw;
     }
 

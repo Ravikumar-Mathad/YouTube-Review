@@ -14,7 +14,7 @@ const Mainpage = (props) => {
             Emphasizing the <br />
             Impact of YouTube Content
           </h1>
-          <p className="description">
+          <p className="Pdescription">
             Tired of scrolling through endless YouTube feeds? Discover the best
             YouTube content with
             <br />
