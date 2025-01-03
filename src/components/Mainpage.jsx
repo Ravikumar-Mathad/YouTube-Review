@@ -2,7 +2,7 @@ import React, {useRef} from "react";
 import "../styles/mainPage.css";
 import ExploreBtn from "./ExploreBtn";
 import ContactUsBtn from "./ContactUsBtn";
-import RatingPreview from "./ratingPreview";
+import RatingPreview from './RatingPreview'
 
 const Mainpage = (props) => {
   return (
